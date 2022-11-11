@@ -2,10 +2,10 @@
 
 mod utils;
 
-use utils::{MutexExtension, RwLockExtension, foo, bar};
 use lazy_static::lazy_static;
 use static_leak::{MutexGuardExtension, RwLockReadGuardExtension, RwLockWriteGuardExtension};
 use std::sync::{Mutex, MutexGuard, RwLock, RwLockReadGuard, RwLockWriteGuard};
+use utils::{bar, foo, MutexExtension, RwLockExtension};
 
 impl<T: ?Sized> MutexExtension for Mutex<T> {
     fn is_locked(&self) -> bool {

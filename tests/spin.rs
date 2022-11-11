@@ -3,10 +3,10 @@
 
 mod utils;
 
-use utils::{RwLockExtension, foo, bar};
 use lazy_static::lazy_static;
 use spin::{Mutex, MutexGuard, RwLock, RwLockReadGuard, RwLockWriteGuard};
 use static_leak::{MutexGuardExtension, RwLockReadGuardExtension, RwLockWriteGuardExtension};
+use utils::{bar, foo, RwLockExtension};
 
 impl<T: ?Sized> RwLockExtension for RwLock<T> {
     fn is_readable(&self) -> bool {

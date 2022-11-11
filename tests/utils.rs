@@ -16,4 +16,3 @@ pub fn bar(reference: &'static mut i8) {
     *reference = 21;
     assert_eq!(*reference, 21);
 }
-
